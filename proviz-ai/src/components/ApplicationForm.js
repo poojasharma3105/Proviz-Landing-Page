@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Modal from 'react-modal';
-const API_URL ="http://localhost:8080";
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
 
 const ApplicationForm = ({ isOpen, closeForm }) => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', statement: '' });

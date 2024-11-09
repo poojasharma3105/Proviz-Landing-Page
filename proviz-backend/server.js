@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const morgan = require("morgan");
 const dotenv = require('dotenv');
+const path = require("path");
 
 dotenv.config();
 const app = express();
@@ -24,6 +25,12 @@ mongoose.connect(process.env.DB_URI)
     process.exit(1);
   });
 
+  // Serve static files in production
+  app.use(express.static(path.join(__dirname, "../proviz-ai/build")));
+
+  app.get("*", function(req, res){
+    res.sendFile(path.join(__dirname, "../proviz-ai/build" , "index.html"));
+  });
   
 
 // Routes
