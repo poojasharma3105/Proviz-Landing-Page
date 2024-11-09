@@ -1,29 +1,35 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 const cors = require('cors');
+const morgan = require("morgan");
 const dotenv = require('dotenv');
-const applicationRoutes = require('./routes/applications');
 
 dotenv.config();
 const app = express();
 
 // Middleware
-app.use(bodyParser.json());
+app.use(morgan("dev"));
+app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:3000', // Replace with your frontend URL
+  origin: 'http://localhost:3000',
   methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
 }));
 
-// Database connection (MongoDB Atlas)
-mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("MongoDB connected"))
-  .catch(err => console.log("Database connection error:", err));
+
+mongoose.connect(process.env.DB_URI)
+  .then(() => console.log(`MongoDB connected `))
+  .catch((err) => {
+    console.log("Database connection error:", err);
+    process.exit(1);
+  });
+
+  
 
 // Routes
-app.use('/api/apply', applicationRoutes);
+app.use('/user', require("./routes/applications.js"));
 
-const PORT = process.env.PORT || 5000;
+const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

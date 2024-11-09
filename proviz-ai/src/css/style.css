@@ -15,7 +15,6 @@
   transition: background-color 0.3s ease;
 }
 
-/* Consistent Heading Styling */
 h1, h2 {
   font-weight: bold;
   color: #00f1ff;
@@ -23,14 +22,13 @@ h1, h2 {
   margin-bottom: 20px;
 }
 
-/* Hero Content */
 .hero-content h1 {
-  font-size: 3rem; /* Increased font size */
+  font-size: 3rem; 
   margin-bottom: 20px;
 }
 
 .hero-content p {
-  font-size: 1.5rem; /* Adjusted font size */
+  font-size: 1.5rem; 
   max-width: 700px;
   margin: 0 auto 30px auto;
   color: #a0e4ff;
@@ -38,7 +36,6 @@ h1, h2 {
   line-height: 1.6;
 }
 
-/* General Button Styles */
 .btn, .btn-primary, .neon-btn {
   background-color: #00d4ff;
   color: #000814;
@@ -53,19 +50,16 @@ h1, h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect for Buttons */
 .btn:hover, .btn-primary:hover, .neon-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 30px #00f0ff, 0 0 50px #00f0ff;
 }
 
-/* Focus Effect for Buttons */
 .btn:focus, .btn-primary:focus, .neon-btn:focus {
   outline: none;
   box-shadow: 0 0 30px #00f0ff, 0 0 50px #00f0ff;
 }
 
-/* Button in Hero Section */
 .hero .btn-primary {
   padding: 15px 30px;
   font-size: 1.2rem;
@@ -78,7 +72,6 @@ h1, h2 {
   box-shadow: 0 0 35px #00f0ff, 0 0 60px #00f0ff;
 }
 
-/* About Section Styling */
 .about {
   padding: 60px 20px;
   background-color: #000814;
@@ -88,30 +81,29 @@ h1, h2 {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* About Section Heading */
 .about h2 {
-  font-size: 2.5rem; /* Slightly increased font size */
+  font-size: 2.5rem; 
   color: #00f1ff;
   margin-bottom: 25px;
-  text-shadow: 0 0 15px rgba(0, 241, 255, 0.7), 0 0 25px rgba(0, 241, 255, 0.5); /* Enhanced text-shadow */
+  text-shadow: 0 0 15px rgba(0, 241, 255, 0.7), 0 0 25px rgba(0, 241, 255, 0.5); 
 }
 
 /* About Section Paragraph */
 .about p {
-  font-size: 1.3rem; /* Adjusted font size for better readability */
-  max-width: 900px; /* Increased max-width for more space */
+  font-size: 1.3rem;
+  max-width: 900px; 
   margin: 0 auto;
   color: #a0e4ff;
-  line-height: 1.8; /* Increased line-height for better readability */
-  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff; /* Enhanced text-shadow */
+  line-height: 1.8;
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff; 
 }
 
 /* Footer Section Styling */
 footer {
   padding: 40px 20px;
-  background-color: #001233; /* Maintains dark blue background */
+  background-color: #001233; 
   text-align: center;
-  color: #a0e4ff; /* Light blue text color */
+  color: #a0e4ff; 
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.1);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -120,7 +112,7 @@ footer {
 footer p {
   font-size: 1rem;
   margin: 0 0 15px;
-  text-shadow: 0 0 8px rgba(0, 255, 255, 0.5); /* Glowing effect for text */
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.5); 
 }
 
 /* Footer Link Styling */
@@ -134,7 +126,7 @@ footer ul {
 }
 
 footer ul li a {
-  color: #00d4ff; /* Neon blue color for links */
+  color: #00d4ff;
   text-decoration: none;
   font-weight: bold;
   text-shadow: 0 0 10px #00d4ff, 0 0 15px #00d4ff;
@@ -142,36 +134,36 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-  color: #00f0ff; /* Slightly brighter blue on hover */
-  text-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff; /* Glowing effect on hover */
+  color: #00f0ff; 
+  text-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff; 
 }
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2rem; /* Adjusted font size for mobile */
+    font-size: 2rem;
   }
 
   .hero-content p {
-    font-size: 1rem; /* Adjusted font size for mobile */
+    font-size: 1rem; 
   }
 
   .btn, .btn-primary, .neon-btn {
     padding: 8px 16px;
-    font-size: 1rem; /* Adjusted button size for smaller screens */
+    font-size: 1rem; 
   }
 
   .about h2 {
-    font-size: 1.8rem; /* Smaller heading for mobile */
+    font-size: 1.8rem; 
   }
 
   .about p {
-    font-size: 1rem; /* Smaller paragraph text for mobile */
+    font-size: 1rem;
   }
 
   footer ul {
     flex-direction: column;
-    gap: 10px; /* Stacked footer links for smaller screens */
+    gap: 10px; 
   }
 
   .ReactModal__Content {
@@ -180,48 +172,48 @@ footer ul li a:hover {
   }
 
   .btn {
-    font-size: 12px; /* Smaller button text on mobile */
+    font-size: 12px;
   }
 
   .close-btn {
-    font-size: 12px; /* Smaller close button on mobile */
+    font-size: 12px; 
   }
 }
 
 
 /* Application Form Modal Styles */
 .ReactModal__Content {
-  background-color: #010f29 !important; /* Deep blue background for modal */
+  background-color: #010f29 !important; 
   padding: 20px;
   width: 500px;
   margin: auto;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-  text-align: center; /* Centering the content inside the modal */
+  text-align: center; 
   transition: box-shadow 0.3s ease;
 }
 
 .ReactModal__Content:hover {
-  box-shadow: 0 0 35px rgba(0, 255, 255, 0.2), 0 0 50px rgba(0, 255, 255, 0.1); /* Glowing effect on hover */
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.2), 0 0 50px rgba(0, 255, 255, 0.1); 
 }
 
 /* Input Fields Styling */
 input, textarea {
   margin-bottom: 12px;
-  width: 100%; /* Full width to ensure it fills the modal */
+  width: 100%; 
   padding: 12px;
   font-size: 16px;
   border: 2px solid #444;
   border-radius: 10px;
-  background-color: #c2ebed; /* Slightly darker background for fields */
+  background-color: #c2ebed; 
   color: black;
   box-sizing: border-box;
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 input:focus, textarea:focus {
-  border-color: #00f1ff; /* Neon blue border on focus */
+  border-color: #00f1ff;
   outline: none;
-  box-shadow: 0 0 8px rgba(0, 241, 255, 0.8); /* Glowing effect on focus */
+  box-shadow: 0 0 8px rgba(0, 241, 255, 0.8); 
 }
 
 /* Textarea-specific styling */
@@ -233,15 +225,15 @@ textarea {
 /* Heading Styling */
 .ReactModal__Content h2 {
   font-size: 2rem;
-  color: #00f1ff; /* Neon blue heading */
+  color: #00f1ff; 
   margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(0, 241, 255, 0.7), 0 0 20px rgba(0, 241, 255, 0.5); /* Glowing text */
+  text-shadow: 0 0 10px rgba(0, 241, 255, 0.7), 0 0 20px rgba(0, 241, 255, 0.5); 
 }
 
 /* Button Styles for Application Form */
 .neon-btn {
   margin-top: 12px;
-  background-color: #00f1ff; /* Neon blue background for buttons */
+  background-color: #00f1ff; 
   color: white;
   padding: 12px 25px;
   font-size: 1rem;
@@ -250,18 +242,18 @@ textarea {
   box-shadow: 0 0 15px rgba(0, 241, 255, 0.7), 0 0 25px rgba(0, 241, 255, 0.5);
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  display: inline-block; /* Ensures the button remains centered */
+  display: inline-block;
 }
 
 .neon-btn:hover {
-  background-color: #00b8c0; /* Lighter blue on hover */
+  background-color: #00b8c0; 
   box-shadow: 0 0 20px rgba(0, 241, 255, 1), 0 0 30px rgba(0, 241, 255, 0.8);
 }
 
 /* Close Button Styling */
 .close-btn {
   margin-top: 15px;
-  background-color: #ff4d4d; /* Red close button */
+  background-color: #ff4d4d;
   color: white;
   padding: 10px 20px;
   font-size: 14px;
@@ -273,7 +265,7 @@ textarea {
 }
 
 .close-btn:hover {
-  background-color: #d80d0d; /* Darker red on hover */
+  background-color: #d80d0d; 
   box-shadow: 0 0 20px rgb(215, 126, 126), 0 0 30px rgba(234, 150, 150, 0.8);
 }
 
@@ -284,22 +276,22 @@ textarea {
 /* Responsive Design for Modal */
 @media (max-width: 768px) {
   .ReactModal__Content {
-    width: 90%; /* Full width for smaller screens */
-    padding: 20px; /* Less padding on smaller screens */
+    width: 90%;
+    padding: 20px; 
   }
 
   .neon-btn {
-    padding: 10px 20px; /* Smaller button size */
-    font-size: 0.9rem; /* Smaller font size for mobile */
+    padding: 10px 20px; 
+    font-size: 0.9rem;
   }
 
   .close-btn {
-    font-size: 12px; /* Smaller font size for mobile */
+    font-size: 12px; 
   }
 
   input, textarea {
-    font-size: 14px; /* Slightly smaller font size on mobile */
-    padding: 12px; /* Less padding on mobile */
+    font-size: 14px; 
+    padding: 12px; 
   }
 }
 

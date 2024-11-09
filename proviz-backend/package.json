@@ -1,14 +1,17 @@
 {
-  "proxy": "http://localhost:5000",
+  "engines": {
+    "node": "20.13.0"
+  },
   "name": "proviz-backend",
   "version": "1.0.0",
   "main": "index.js",
-  "private": true,
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "cd backend && npm start",
-    "client": "cd frontend && npm start",
-    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install"
+    "start": "npm run client:build && node server.js",
+    "client": "npm start --prefix client",
+    "client:build": "npm run build --prefix client",
+    "build": "npm run client:build",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -19,7 +22,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "mongoose": "^8.8.1"
+    "mongoose": "^8.8.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "concurrently": "^9.1.0"

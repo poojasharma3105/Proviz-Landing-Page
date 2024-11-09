@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Modal from 'react-modal';
+const API_URL ="http://localhost:8080";
 
 const ApplicationForm = ({ isOpen, closeForm }) => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', statement: '' });
@@ -14,22 +15,26 @@ const ApplicationForm = ({ isOpen, closeForm }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (!formData.name || !formData.email || !formData.phone || !formData.statement) {
       setError('All fields are required!');
       return;
     }
-
+  
     try {
-      await axios.post('/api/apply', formData);
+      const response = await axios.post(`${API_URL}/user/apply`, formData , {
+        headers: {
+          'Content-Type': 'application/json',
+        } });
+      console.log("Backend Response:", response.data);  // Log the response from the backend
       setSuccess('Your application has been submitted successfully!');
-      setError(null);  // Clear any previous errors
-      setFormData({ name: '', email: '', phone: '', statement: '' });  // Reset form data
+      setError(null);
     } catch (err) {
       setError('Something went wrong, please try again later.');
-      setSuccess(null);  // Clear any previous success message
     }
+    
   };
+  
 
   // Reset messages and form on close
   const handleClose = () => {
